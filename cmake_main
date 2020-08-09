@@ -1,5 +1,5 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.14)
 #指定项目名称
-PROJECT(2_SqList)
+PROJECT(data_struct)
 #指定头文件目录
 add_subdirectory(2_SqList)

@@ -1,5 +1,14 @@
+#指定CMake编译最低要求版本
 CMAKE_MINIMUM_REQUIRED(VERSION 3.14)
-#指定项目名称
-PROJECT(2_SqList)
+#给项目命名
+PROJECT(SqList)
+#收集c/c++文件并赋值给变量SRC_LIST_CPP  ${PROJECT_SOURCE_DIR}代表区当前项目录
+FILE(GLOB SRC_LIST_CPP ${PROJECT_SOURCE_DIR}/src/SqList.cpp)
+#FILE(GLOB SRC_LIST_C ${PROJECT_SOURCE_DIR}/src/*.c)
 #指定头文件目录
-add_subdirectory(2_SqList)
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+#指定生成库文件的目录
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+#去变量SRC_LIST_CPP 与SRC_LIST_C 指定生成libmyprint 动态库   默认生成静态库  SHARED指定生成库类型为动态库
+#ADD_LIBRARY(SqList SHARED ${SRC_LIST_CPP} ${SRC_LIST_C})
+ADD_LIBRARY(SqList ${SRC_LIST_CPP})
