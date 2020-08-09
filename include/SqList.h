@@ -13,6 +13,6 @@ typedef struct
     int length;
 }SqList;
 //³õÊ¼»¯Ë³Ðò±í
-SqList* CreateSqList(SqList *L,ElemType a[],int n);
+void CreateSqList(SqList * &L,ElemType a[],int n);
 
 #endif //GOGO_DATASTRUCT_SQLIST_H

@@ -3,7 +3,7 @@
 //
 #include "SqList.h"
 #include <stdlib.h>
-SqList* CreateSqList(SqList *L,ElemType a[],int n)
+void CreateSqList(SqList * &L,ElemType a[],int n)
 {
     int i=0,k=0;
     L=(SqList*)malloc(sizeof(SqList));
@@ -12,6 +12,5 @@ SqList* CreateSqList(SqList *L,ElemType a[],int n)
         k++,i++;
     }
     L->length=k;
-    return L;
 }
 
